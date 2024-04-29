@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/gradient_toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/baloo"
+        android:textColor="@color/white"
+        android:text="@string/new_user"
+        android:gravity="center"
+        android:layout_marginEnd="16dp"
+        android:textSize="36sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintHeight_percent="0.4" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edittext_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="emailAddress"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="16dp"
+            android:drawableTint="@color/orange_medium"
+            android:elevation="20dp"
+            android:fontFamily="@font/baloo"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:padding="16dp"
+            android:textColor="@color/orange_weak"
+            android:textColorHint="@color/light_gray"
+            android:textSize="20sp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edittext_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="password"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:drawablePadding="16dp"
+            android:drawableTint="@color/orange_medium"
+            android:elevation="20dp"
+            android:focusable="true"
+            android:fontFamily="@font/baloo"
+            android:hint="@string/new_password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textColor="@color/orange_weak"
+            android:textColorHint="@color/light_gray"
+            android:textSize="20sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_confirm_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@id/groupradio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edittext_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="password"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:drawablePadding="16dp"
+            android:drawableTint="@color/orange_medium"
+            android:elevation="20dp"
+            android:focusable="true"
+            android:fontFamily="@font/baloo"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textColor="@color/orange_weak"
+            android:textColorHint="@color/light_gray"
+            android:textSize="20sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="cardView_email,cardView_password, cardView_confirm_password"
+        app:flow_verticalGap="32dp"
+        app:flow_wrapMode="aligned"
+        app:layout_constraintBottom_toTopOf="@id/groupradio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <RadioGroup
+        android:id="@+id/groupradio"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_width="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/flow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:checkedButton="@id/radia_id1"
+    >
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radia_id1"
+            android:fontFamily="@font/baloo"
+            android:text=" Create New Shopping List"
+            android:textColor="@color/grey"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radia_id2"
+            android:fontFamily="@font/baloo"
+            android:textColor="@color/grey"
+            android:text=" Join Existing Shopping List"
+            android:textSize="20sp"/>
+    </RadioGroup>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView_joinlist"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="10dp"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@id/register_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/groupradio">
+
+        <EditText
+            android:id="@+id/edittext_confirm_joinlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints="password"
+            android:background="@color/white"
+            android:drawableStart="@drawable/ic_baseline_data_saver_on_24"
+            android:drawablePadding="16dp"
+            android:drawableTint="@color/orange_medium"
+            android:elevation="20dp"
+            android:focusable="true"
+            android:fontFamily="@font/baloo"
+            android:hint="Enter invite code"
+            android:inputType="text"
+            android:padding="12dp"
+            android:textColor="@color/orange_weak"
+            android:textColorHint="@color/light_gray"
+            android:textSize="16sp" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="64dp"
+        android:autofillHints="password"
+        android:background="@drawable/login_btn_selector"
+        android:drawablePadding="16dp"
+        android:elevation="20dp"
+        android:fontFamily="@font/baloo"
+        android:padding="12dp"
+        android:paddingVertical="16dp"
+        android:text="@string/register"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:clickable="true"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardView_joinlist"
+    android:layout_marginTop="30dp"
+        android:focusable="true">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/login_goto_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:elevation="20dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:paddingVertical="16dp"
+        android:text="@string/login"
+        android:textColor="@color/orange_weak"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="282dp"
+        tools:layout_editor_absoluteY="448dp" />
+
+    <TextView
+        android:id="@+id/register_suggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autofillHints="name"
+        android:elevation="20dp"
+        android:fontFamily="@font/baloo"
+        android:gravity="center"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="16dp"
+        android:text="@string/already_have_an_account"
+        android:textColor="#888787"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="register_suggestion,login_goto_link"
+        app:flow_wrapMode="aligned"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_button" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

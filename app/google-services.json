@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "172966417697",
+    "project_id": "shoplist-with-firebase",
+    "storage_bucket": "shoplist-with-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172966417697:android:66ffe94577bcaa27081a60",
+        "android_client_info": {
+          "package_name": "mad.sltc.shoplistwithfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdY8ALUKEY_LVOdVKiALU2LlnqSCZVIcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

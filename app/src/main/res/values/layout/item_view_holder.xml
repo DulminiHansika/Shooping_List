@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="2dp"
+    android:id="@+id/cardview"
+    app:cardElevation="15dp"
+    app:cardBackgroundColor="@color/white"
+    app:strokeColor="@color/orange_strong"
+    app:strokeWidth="1dp"
+ >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/nameTextView_xml"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:fontFamily="@font/baloo"
+                android:text="מוצר"
+                android:paddingTop="16dp"
+                android:paddingEnd="4dp"
+                android:textColor="@color/black"
+                android:textDirection="rtl"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/guideline_vertical"
+                app:layout_constraintEnd_toStartOf="@+id/isBoughtItemview"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/amountTextView_xml"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:textStyle="bold"
+                android:text="0"
+                android:gravity="center"
+                android:paddingTop="4dp"
+
+                android:fontFamily="@font/baloo"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline_vertical"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.15" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/isBoughtItemview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/checkbox_empty" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+

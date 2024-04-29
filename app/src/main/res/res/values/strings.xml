@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Firebase Assignment</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="login_fragment_label">Login Fragment</string>
+    <string name="home_fragment_label">Home Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="password_hint">&#160;Password</string>
+    <string name="login_btn">Login</string>
+    <string name="register_goto">REGISTER</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="email_hint">&#160;Email</string>
+    <string name="shopping_list_title">Shopping List</string>
+    <string name="delete_selected">Delete Selected</string>
+    <string name="delete_all">Delete All</string>
+    <string name="add_new_item_button">add new item button</string>
+    <string name="my_list_title">My List</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="new_user">NEW USER</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="new_password">New Password</string>
+    <string name="register">Register</string>
+    <string name="invite_code">Invite Code:</string>
+    <string name="application_version">v 1.1.0</string>
+    <string name="app_v_textview">App Version:</string>
+</resources>
+
